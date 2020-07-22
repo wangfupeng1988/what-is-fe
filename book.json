@@ -1,0 +1,19 @@
+{
+    "title": "Web 前端知识体系",
+    "author": "wangfupeng",
+    "description": "争做国内完善的、规范的 web 前端知识体系",
+    "language": "zh-hans",
+    "root": "docs",
+    "plugins": [
+        "advanced-emoji",
+        "todo",
+        "back-to-top-button",
+        "chapter-fold",
+        "-lunr",
+        "-search",
+        "search-pro",
+        "page-toc-button"
+    ],
+    "pluginsConfig": {
+    }
+}
