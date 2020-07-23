@@ -29,7 +29,7 @@ jobs:
         echo "---------- set ssh-key ok ----------"
     - name: download and replace # 下载现有文件，替换
       run: |
-        git clone git@gitee.com:what-is-fe/what-is-fe.git
+        git clone https://gitee.com/what-is-fe/what-is-fe.git
         mv what-is-fe what-is-fe-pages ## pages 项目，重命名
         echo "---------- git clone ok ----------"
         cp -r ./_book/ ./what-is-fe-pages ## 用最新构建出来的文件，替换现有的
