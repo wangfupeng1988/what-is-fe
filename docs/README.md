@@ -440,7 +440,7 @@ Web 前端知识体系很重要，而当今网络上又没有一个靠谱的，�
 
 # 关于作者
 
-[王福朋](https://github.com/wangfupeng1988/) ，前端工程师，PMP，开源编辑器 [wangEditor](http://www.wangeditor.com/) 作者。
+[王福朋](https://github.com/wangfupeng1988/) ，资深前端工程师，PMP，开源编辑器 [wangEditor](http://www.wangeditor.com/) 作者。就职于一线互联网公司。
 
 # 欢迎参与贡献
 
