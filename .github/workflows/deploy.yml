@@ -26,6 +26,7 @@ jobs:
         mkdir -p ~/.ssh/
         echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan "gitee.com" >> ~/.ssh/known_hosts
         echo "---------- set ssh-key ok ----------"
     - name: download and replace # 下载现有文件，替换
       run: |
