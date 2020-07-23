@@ -17,9 +17,9 @@ jobs:
         node-version: 12
     - name: build
       run: |
-        npm ci ## 安装 npm 依赖
+        npm i
         echo "---------- npm install ok ----------"
-        npm run build --if-present ## 打包出 html ，到 _book 目录
+        npm run build ## 打包出 html ，到 _book 目录
         echo "---------- build ok ----------"
     - name: set ssh key # 临时设置 ssh key
       run: |
