@@ -12,8 +12,43 @@
         "-lunr",
         "-search",
         "search-pro",
-        "page-toc-button"
+        "page-toc-button",
+        "github",
+        "splitter",
+        "tbfed-pagefooter",
+        "donate",
+        "pageview-count",
+        "hide-element"
     ],
     "pluginsConfig": {
+        "sharing": {
+            "facebook": false,
+            "twitter": false,
+            "google": false,
+            "weibo": true,
+            "instapaper": false,
+            "vk": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "instapaper"
+            ]
+        },
+        "github": {
+            "url": "https://github.com/wangfupeng1988/what-is-fe"
+        },
+        "tbfed-pagefooter": {
+            "copyright":"Copyright &copy what-is-fe (2020 - present)"
+        },
+        "donate": {
+            "wechat": "https://what-is-fe.gitee.io/images/wechat-pay.jpeg",
+            "alipay": "https://what-is-fe.gitee.io/images/ali-pay.jpeg",
+            "title": "",
+            "button": "捐赠",
+            "alipayText": "",
+            "wechatText": ""
+        },
+        "hide-element": {
+            "elements": [".gitbook-link"]
+        }
     }
 }
