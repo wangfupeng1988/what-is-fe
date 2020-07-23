@@ -1,0 +1,50 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# github actions 中文文档 https://docs.github.com/cn/actions/getting-started-with-github-actions
+
+name: deploy
+
+on:
+  push:
+    branches: [ master ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: build
+      run: |
+        npm ci ## 安装 npm 依赖
+        echo "---------- npm install ok ----------"
+        npm run build --if-present ## 打包出 html ，到 _book 目录
+        echo "---------- build ok ----------"
+    - name: set ssh key # 临时设置 ssh key
+      run: |
+        mkdir -p ~/.ssh/
+        echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan ${{secrets.TECENT_SERVER}} >> ~/.ssh/known_hosts
+        echo "---------- set ssh-key ok ----------"
+    - name: download and replace # 下载现有文件，替换
+      run: |
+        git clone git@gitee.com:what-is-fe/what-is-fe.git
+        mv what-is-fe what-is-fe-pages ## pages 项目，重命名
+        echo "---------- git clone ok ----------"
+        cp -r ./_book/ ./what-is-fe-pages ## 用最新构建出来的文件，替换现有的
+        echo "---------- replace ok ----------"
+    - name: upload # 上传文件
+      run: |
+        cd ./what-is-fe-pages
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        echo "---------- git status start ----------"
+        echo `git status`
+        echo "---------- git status end ----------"
+        git add .
+        git commit -m "update by github actions"
+        git push origin master
+    - name: delete ssh key # 删除 ssh key
+      run: rm -rf ~/.ssh/id_rsa
