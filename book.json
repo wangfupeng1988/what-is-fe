@@ -7,18 +7,16 @@
     "plugins": [
         "advanced-emoji",
         "todo",
-        "back-to-top-button",
         "chapter-fold",
         "-lunr",
         "-search",
         "search-pro",
-        "page-toc-button",
         "github",
         "splitter",
         "tbfed-pagefooter",
         "donate",
-        "pageview-count",
-        "hide-element"
+        "hide-element",
+        "anchor-navigation-ex"
     ],
     "pluginsConfig": {
         "sharing": {
