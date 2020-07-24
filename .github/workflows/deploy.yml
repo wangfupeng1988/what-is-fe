@@ -33,7 +33,7 @@ jobs:
         git clone git@gitee.com:what-is-fe/what-is-fe.git
         mv what-is-fe what-is-fe-pages ## pages 项目，重命名
         echo "---------- git clone ok ----------"
-        cp -r ./_book ./what-is-fe-pages/_book ## 用最新构建出来的文件，替换现有的
+        cp -r ./_book/ ./what-is-fe-pages ## 用最新构建出来的文件，替换现有的
         echo "---------- replace ok ----------"
     - name: upload # 上传文件
       run: |
