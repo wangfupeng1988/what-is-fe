@@ -14,9 +14,10 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
-        node-version: 12
+        node-version: 14
     - name: build
       run: |
+        echo "---------- node-version `node -v` ----------"
         npm ci
         echo "---------- npm install ok ----------"
         npm run build ## 打包出 html ，到 _book 目录
