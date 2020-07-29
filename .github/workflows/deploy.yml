@@ -17,7 +17,7 @@ jobs:
         node-version: 12
     - name: build
       run: |
-        npm i
+        npm ci
         echo "---------- npm install ok ----------"
         npm run build ## 打包出 html ，到 _book 目录
         echo "---------- build ok ----------"
