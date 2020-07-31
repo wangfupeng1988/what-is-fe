@@ -18,7 +18,7 @@ jobs:
     - name: build
       run: |
         echo "---------- node-version `node -v` ----------"
-        npm ci
+        npm i
         echo "---------- npm install ok ----------"
         npm run build ## 打包出 html ，到 _book 目录
         echo "---------- build ok ----------"
