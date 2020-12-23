@@ -7,6 +7,10 @@ name: deploy
 on:
   push:
     branches: [ master ]
+    paths:
+            - '.github/workflows/*'
+            - 'docs/**'
+            - 'build/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest

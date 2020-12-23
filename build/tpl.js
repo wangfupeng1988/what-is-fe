@@ -24,7 +24,7 @@ function genTpl(root = {}, styles = [], scripts = []) {
     <html>
         <head>${headContent}</head>
         <body>
-            <svg id="markmap" style="width: 100%; height: 3800px;"></svg>
+            <svg id="markmap" style="width: 100%; height: 4500px;"></svg>
 
             <script src="https://cdn.jsdelivr.net/npm/d3@6"></script>
             <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
