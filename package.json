@@ -5,36 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gitbook-install": "gitbook install",
-    "dev": "gitbook serve",
-    "build": "gitbook build"
+    "build": "node build/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wangfupeng1988/what-is-fe.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "前端",
+    "知识体系"
+  ],
+  "author": "王福朋",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wangfupeng1988/what-is-fe/issues"
   },
   "homepage": "https://github.com/wangfupeng1988/what-is-fe#readme",
   "devDependencies": {
-    "gitbook-cli": "^2.3.2"
-  },
-  "dependencies": {
-    "gitbook-plugin-advanced-emoji": "^0.2.2",
-    "gitbook-plugin-anchor-navigation-ex": "^1.0.14",
-    "gitbook-plugin-back-to-top-button": "^0.1.4",
-    "gitbook-plugin-chapter-fold": "0.0.4",
-    "gitbook-plugin-donate": "^1.0.2",
-    "gitbook-plugin-github": "^2.0.0",
-    "gitbook-plugin-hide-element": "0.0.4",
-    "gitbook-plugin-page-toc-button": "^0.1.1",
-    "gitbook-plugin-search-pro": "^2.0.2",
-    "gitbook-plugin-splitter": "0.0.8",
-    "gitbook-plugin-tbfed-pagefooter": "0.0.1",
-    "gitbook-plugin-todo": "^0.1.3"
+    "fs-extra": "^9.0.1",
+    "markmap-lib": "^0.11.1"
   }
 }

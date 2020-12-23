@@ -20,7 +20,7 @@ jobs:
         echo "---------- node-version `node -v` ----------"
         npm i
         echo "---------- npm install ok ----------"
-        npm run build ## 打包出 html ，到 _book 目录
+        npm run build ## 打包出 html ，到 dist 目录
         echo "---------- build ok ----------"
     - name: set ssh key # 临时设置 ssh key
       run: |
@@ -34,7 +34,8 @@ jobs:
         git clone git@gitee.com:what-is-fe/what-is-fe.git
         mv what-is-fe what-is-fe-pages ## pages 项目，重命名
         echo "---------- git clone ok ----------"
-        cp -r ./_book/* ./what-is-fe-pages ## 用最新构建出来的文件，替换现有的
+        rm -rf ./what-is-fe-pages/*
+        cp -r ./dist/* ./what-is-fe-pages ## 用最新构建出来的文件，替换现有的
         echo "---------- replace ok ----------"
     - name: upload # 上传文件
       run: |
