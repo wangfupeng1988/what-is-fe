@@ -53,7 +53,7 @@ function genTpl(root = {}, styles = [], scripts = []) {
 
                 // or pass an SVG element directly
                 const svgEl = document.querySelector('#markmap');
-                Markmap.create(svgEl, null);
+                Markmap.create(svgEl, null, data);
             </script>
         </body>
     </html>`
