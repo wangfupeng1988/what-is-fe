@@ -10,10 +10,20 @@ function genHeadContent() {
     return `<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>${name}</title>
+        <title>${name} | ${description}</title>
         <meta name="description" content="${description}">
         <meta name="keywords" content="${keywords.join(',')}">
         <meta name="author" content="${author}">
+        <style>
+            #markmap {
+                height: 4800px;
+            }
+            @media (max-width: 414px) {
+                #markmap {
+                    height: 1800px;
+                }
+            }
+        </style>
     </head>`
 }
 
@@ -24,7 +34,7 @@ function genTpl(root = {}, styles = [], scripts = []) {
     <html>
         <head>${headContent}</head>
         <body>
-            <svg id="markmap" style="width: 100%; height: 4500px;"></svg>
+            <svg id="markmap" style="width: 100%;"></svg>
 
             <script src="https://cdn.jsdelivr.net/npm/d3@6"></script>
             <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
@@ -43,7 +53,7 @@ function genTpl(root = {}, styles = [], scripts = []) {
 
                 // or pass an SVG element directly
                 const svgEl = document.querySelector('#markmap');
-                Markmap.create(svgEl, null, data);
+                Markmap.create(svgEl, null);
             </script>
         </body>
     </html>`
