@@ -1,12 +1,12 @@
 {
   "name": "what-is-fe",
-  "version": "1.0.0",
-  "description": "Web 前端知识体系",
+  "version": "2.0.0",
+  "description": "Web 前端 & 全栈 知识体系",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wangfupeng1988/what-is-fe.git"
@@ -16,13 +16,8 @@
     "知识体系"
   ],
   "author": "王福朋",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/wangfupeng1988/what-is-fe/issues"
   },
-  "homepage": "https://github.com/wangfupeng1988/what-is-fe#readme",
-  "devDependencies": {
-    "fs-extra": "^9.0.1",
-    "markmap-lib": "^0.11.1"
-  }
+  "homepage": "https://github.com/wangfupeng1988/what-is-fe#readme"
 }
